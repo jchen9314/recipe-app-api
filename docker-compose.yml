@@ -1,12 +1,12 @@
-version: "3"
+version: "3" 
 
 services: 
-  app:
-    build:
+  app: # name of service
+    build: 
       context: .
-    ports:
+    ports: # map project from port 8000 on local host to port 8000 on our image
       - "8000:8000"
-    volumes:
+    volumes: # make changes automatically be updated in the container
       - ./app:/app
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
