@@ -1,5 +1,5 @@
+# alpine: lightweight version of Python 3.7 docker image
 FROM python:3.7-alpine
-MAINTAINER JC
 
 # ensure the py output is sent straight to terminal w/o being first buffered
 ENV PYTHONUNBUFFERED 1
