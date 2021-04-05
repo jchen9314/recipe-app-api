@@ -8,5 +8,5 @@ services:
       - "8000:8000"
     volumes: # make changes automatically be updated in the container
       - ./app:/app
-    command: >
-      sh -c "python manage.py runserver 0.0.0.0:8000"
+    command: > # 0.0.0.0 --> run Django development server available on all the IP addresses that run on the Docker container
+      sh -c "python manage.py runserver 0.0.0.0:8000" 
